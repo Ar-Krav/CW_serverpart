@@ -35,13 +35,15 @@ public class TestServlet extends HttpServlet {
             }
         });
 
+        /*jdbcTemplate.update("UPDATE meals SET name = ? WHERE id = 2","borsch with meat 1");  DELETE & INSERT done via .update function. Just with necessary query code */
+
         Gson json = new Gson();
 
         String jsonResult = json.toJson(students);
 
         resp.setContentType("application/json");
         PrintWriter out = resp.getWriter();
-        out.print("HELLO WORLD");
+        out.print(jsonResult);
         out.flush();
     }
 
