@@ -41,7 +41,7 @@ public class TestServlet extends HttpServlet {
 
         resp.setContentType("application/json");
         PrintWriter out = resp.getWriter();
-        out.print(jsonResult);
+        out.print("HELLO WORLD");
         out.flush();
     }
 
